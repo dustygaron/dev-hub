@@ -1,29 +1,22 @@
 const express = require('express')
-const mongoose = require('mongoose')
-
-const users = require('./routes/api/users')
-const profile = require('./routes/api/profile')
-const posts = require('./routes/api/posts')
-
+const connectDB = require('./config/db')
+// require('dotenv').config()
 const app = express()
-require('dotenv').config()
 
-// DB Config
-const db = require('./config/keys').mongoURI
+// Connect Database
+connectDB()
 
-// Connect to MongoDB
-mongoose
-  .connect(db)
-  .then(() => console.log('MongoDB Connected'))
-  .catch(err => console.log(err))
+// Init Middleware - Allows us to get data from req.body
+app.use(express.json({ extended: false }))
 
-app.get('/', (req, res) => res.send('Hello World'))
+app.get('/', (req, res) => res.send('API Running!!!'))
 
 // Routes
 app.use('/api/users', require('./routes/api/users'))
 app.use('/api/auth', require('./routes/api/auth'))
 app.use('/api/profile', require('./routes/api/profile'))
 app.use('/api/posts', require('./routes/api/posts'))
+
 
 const port = process.env.PORT || 5000
 
