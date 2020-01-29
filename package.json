@@ -1,0 +1,41 @@
+{
+  "name": "dev-hub",
+  "version": "1.0.0",
+  "description": "social network for devs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server",
+    "server": "nodemon server",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dustygaron/dev-hub.git"
+  },
+  "keywords": [
+    "social",
+    "network",
+    "for",
+    "devs"
+  ],
+  "author": "Dusty Garon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dustygaron/dev-hub/issues"
+  },
+  "homepage": "https://github.com/dustygaron/dev-hub#readme",
+  "dependencies": {
+    "bcrypt": "^3.0.7",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.8.10",
+    "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0",
+    "validator": "^12.2.0"
+  }
+}
