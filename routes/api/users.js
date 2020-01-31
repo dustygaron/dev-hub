@@ -2,6 +2,8 @@ const express = require('express')
 const router = express.Router()
 const gravatar = require('gravatar')
 const bcrypt = require('bcryptjs')
+const jwt = require('jsonwebtoken')
+const config = require('config')
 const { check, validationResult } = require('express-validator')
 
 const User = require('../../models/User')
@@ -19,20 +21,20 @@ router.post('/', [
   async (req, res) => {
     // console.log(req.body)
     const errors = validationResult(req)
+
     if (!errors.isEmpty()) {
       return res.status(400).json({ errors: errors.array() })
     }
-
     const { name, email, password } = req.body
 
-
-    // Encrypt password
-    // Return jsonwebtoken
     try {
       // See if user exists
       let user = await User.findOne({ email })
+
       if (user) {
-        return res.status(400).json({ errors: [{ msg: 'User already exists' }] })
+        return res
+          .status(400)
+          .json({ errors: [{ msg: 'User already exists' }] })
       }
       // Get user's gravatar
       const avatar = gravatar.url(email, {
@@ -42,7 +44,12 @@ router.post('/', [
       })
 
       // Create new user (pass not encrypted yet)
-      user = new User({ name, email, avatar, password })
+      user = new User({
+        name,
+        email,
+        avatar,
+        password
+      })
 
       // Create salt and encrypt pass
       const salt = await bcrypt.genSalt(10)
@@ -51,16 +58,27 @@ router.post('/', [
       // Save user to DB
       await user.save()
 
+      // Payload
+      const payload = {
+        user: {
+          id: user.id
+        }
+      }
+
+      jwt.sign(payload, config.get('jwtSecret'), { expiresIn: 350000 }, (err, token) => {
+        if (err) throw err
+        res.json({ token })
+      })
+
       // Return jsonwebtoken
-      res.send('User registered')
+      // res.send('User registered')
 
     } catch (err) {
       console.log(err.message)
       res.status(500).send('Server error')
     }
 
-
-    res.send('User route')
+    // res.send('User route')
   })
 
 
