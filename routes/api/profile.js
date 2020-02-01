@@ -207,10 +207,15 @@ router.put('/experience', [auth, [
     }
 
     try {
+      // Get profile by user id
       const profile = await Profile.findOne({ user: req.user.id })
+
       profile.experience.unshift(newExp)
+
       await profile.save()
+
       res.json(profile)
+
     } catch (err) {
       console.log(err.message)
       res.status(500).send('Server Error')
@@ -219,6 +224,34 @@ router.put('/experience', [auth, [
   }
 )
 
+
+// ----------------------------------------------
+// @route   DELTE api/profile/experience/:exp_id
+// @desc    Delete experience from profile
+// @route   Private
+// ----------------------------------------------
+router.delete('/experience/:exp_id', auth, async (req, res) => {
+  try {
+    // Get profile of logged in user by user id
+    const profile = await Profile.findOne({ user: req.user.id })
+
+    // Get index
+    const removeIndex = profile.experience.map(item => item.id).indexOf(req.params.exp_id)
+
+    // Get profile we already have, splice index, remove 1
+    profile.experience.splice(removeIndex, 1)
+
+    // Save profile
+    await profile.save()
+
+    // Send back response which is profile
+    res.json(profile)
+
+  } catch (err) {
+    console.log(err.message)
+    res.status(500).send('Server Error')
+  }
+})
 
 
 module.exports = router
