@@ -27,6 +27,7 @@ router.get('/me', auth, async (req, res) => {
   }
 })
 
+
 // -----------------------------------
 // @route   POST api/profile
 // @desc    Create or update user profile
@@ -144,6 +145,30 @@ router.get('/user/:user_id', async (req, res) => {
     res.status(500).send('aaaServer Error')
   }
 })
+
+
+// -----------------------------------
+// @route   DELETE api/profile
+// @desc    Delete profile, user & posts
+// @route   Private
+// -----------------------------------
+router.delete('/', auth, async (req, res) => {
+  try {
+    // @todo - remove user's posts
+
+    // Remove profile
+    await Profile.findOneAndRemove({ user: req.user.id })
+    // Remove user
+    await User.findOneAndRemove({ _id: req.user.id })
+
+    res.json({ msg: 'User deleted' })
+
+  } catch (err) {
+    console.log(err.message)
+    res.status(500).send('Server Error')
+  }
+})
+
 
 
 
