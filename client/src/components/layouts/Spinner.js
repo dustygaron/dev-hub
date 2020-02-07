@@ -5,7 +5,7 @@ export default () => (
   <>
     <img src={spinner}
       style={{
-        width: '200px',
+        width: '500px',
         margin: 'auto',
         display: 'block'
       }}
