@@ -11,7 +11,7 @@ const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {
   // As soon as loads run getProfiles. Only run once, use []. This puts profiles into state.
   useEffect(() => {
     getProfiles()
-  }, [])
+  }, [getProfiles])
 
   return (
     <>
