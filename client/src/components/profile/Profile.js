@@ -14,8 +14,12 @@ const Profile = ({ getProfileById, profile: { profile, loading }, auth, match })
   return (
     <>
       {profile === null || loading ? <Spinner /> : <>
-        <Link to='/profiles' className='btn btn-light'>Back to Profiles</Link>
-        {auth.isAuthenticated && auth.loading === false && auth.user._id === profile.user._id && <Link to='/edit-profile' className='btn btn-dark'>Edit Profile</Link>}
+        <Link to='/profiles' className='btn btn-light'>
+          Back to Profiles
+        </Link>
+        {auth.isAuthenticated && auth.loading === false && auth.user._id === profile.user._id && <Link to='/edit-profile' className='btn btn-dark'>
+          Edit Profile
+        </Link>}
       </>}
     </>
   )
