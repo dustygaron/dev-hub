@@ -11,8 +11,8 @@ const ProfileAbout = ({ profile: { bio, skills, user: { name } } }) => {
             </h2>
           <p>
             {bio}
-            <div className="line"></div>
           </p>
+          <div className="line"></div>
         </>
       )}
 
