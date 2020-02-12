@@ -29,10 +29,12 @@
   "homepage": "https://github.com/dustygaron/dev-hub#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
+    "brew": "0.0.8",
     "config": "^3.2.5",
     "express": "^4.17.1",
     "express-validator": "^6.3.1",
     "gravatar": "^1.8.0",
+    "homebrew": "^0.1.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.8.10",
     "request": "^2.88.0"
