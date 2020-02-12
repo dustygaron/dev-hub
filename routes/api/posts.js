@@ -71,7 +71,6 @@ router.get('/:id', auth, async (req, res) => {
     if (!post) {
       return res.status(404).json({ msg: 'Post not found' })
     }
-    s
     res.json(post)
 
   } catch (err) {
