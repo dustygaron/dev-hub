@@ -1,6 +1,9 @@
 {
   "name": "dev-hub",
   "version": "1.0.0",
+  "engines": {
+    "node": "12.15.0"
+  },
   "description": "social network for devs",
   "main": "server.js",
   "scripts": {
