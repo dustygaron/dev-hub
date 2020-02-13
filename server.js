@@ -9,6 +9,7 @@ connectDB()
 // Init Middleware - Allows us to get data from req.body
 app.use(express.json({ extended: false }))
 
+// Development only
 // app.get('/', (req, res) => res.send('API is Running!!!'))
 
 // Routes
