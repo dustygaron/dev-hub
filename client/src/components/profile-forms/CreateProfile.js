@@ -48,7 +48,7 @@ const CreateProfile = ({ createProfile, history }) => {
   }
 
   return (
-    <>
+    <div className='card'>
       <h1 className='large text-primary'>
         Create Your Profile
       </h1>
@@ -215,7 +215,7 @@ const CreateProfile = ({ createProfile, history }) => {
           Go Back
         </Link>
       </form>
-    </>
+    </div>
   )
 }
 

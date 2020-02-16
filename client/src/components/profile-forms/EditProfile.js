@@ -71,7 +71,7 @@ const EditProfile = ({
   }
 
   return (
-    <>
+    <div className='card'>
       <h1 className='large text-primary'>
         Create Your Profile
       </h1>
@@ -243,7 +243,7 @@ const EditProfile = ({
           Go Back
         </Link>
       </form>
-    </>
+    </div>
   )
 }
 

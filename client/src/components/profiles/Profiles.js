@@ -14,7 +14,7 @@ const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {
   }, [getProfiles])
 
   return (
-    <>
+    <div className='card'>
       {
         loading ? <Spinner /> : <>
           <h1 className="large text-primary">Developers</h1>
@@ -28,7 +28,7 @@ const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {
           </div>
         </>
       }
-    </>
+    </div>
   )
 }
 

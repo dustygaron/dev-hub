@@ -39,7 +39,7 @@ const AddEducation = ({ addEducation, history }) => {
   }
 
   return (
-    <>
+    <div className='card'>
       <h1 className="large text-primary">
         Add Your Education
       </h1>
@@ -134,7 +134,7 @@ const AddEducation = ({ addEducation, history }) => {
           Go Back
         </Link>
       </form>
-    </>
+    </div>
   )
 }
 
