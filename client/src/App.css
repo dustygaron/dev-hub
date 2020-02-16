@@ -59,7 +59,6 @@ img {
   padding: 5%;
   background-color: white;
   border-radius: 10px;
-  width: 60%;
   margin: auto;
 }
 
@@ -229,10 +228,10 @@ img {
   opacity: 0.8;
 }
 
-.bg-light,
+/* .bg-light,
 .badge-light {
-  /* border: #ccc solid 1px; */
-}
+  border: #ccc solid 1px;
+} */
 
 .round-img {
   border-radius: 50%;

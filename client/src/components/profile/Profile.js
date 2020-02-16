@@ -37,7 +37,7 @@ const Profile = ({
                 </Link>
               )}
 
-            <div className='profile-grid my-1'>
+            <div className='profile-grid my-1 card'>
               <ProfileTop profile={profile} />
               <ProfileAbout profile={profile} />
 
