@@ -15,15 +15,15 @@ const Posts = ({ getPosts, post: { posts, loading } }) => {
   return (
     loading ? <Spinner /> :
       <div className='card'>
-        <h1 className="large text-primary">Posts</h1>
+        <h1 className='large text-primary'>Posts</h1>
 
-        <p className="lead">
-          <i className="fas fa-user"></i> Welcome to the Community
+        <p className='lead'>
+          <i className='fas fa-user'></i> Welcome to the Community
         </p>
 
         <PostForm />
 
-        <div className="posts">
+        <div className='posts'>
           {posts.map(post => (
             <PostItem key={post._id} post={post} />
           ))}
