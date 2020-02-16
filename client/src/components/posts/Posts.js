@@ -14,7 +14,7 @@ const Posts = ({ getPosts, post: { posts, loading } }) => {
 
   return (
     loading ? <Spinner /> :
-      <>
+      <div className='card'>
         <h1 className="large text-primary">Posts</h1>
 
         <p className="lead">
@@ -29,7 +29,7 @@ const Posts = ({ getPosts, post: { posts, loading } }) => {
           ))}
         </div>
 
-      </>
+      </div>
   )
 
 }
