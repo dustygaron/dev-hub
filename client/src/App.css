@@ -21,7 +21,7 @@ body {
   font-family: 'system-ui', sans-serif;
   font-size: 18px;
   line-height: 1.6;
-  background-color: #fff;
+  background-color: var(--light-color);
   color: #333;
 }
 
@@ -53,6 +53,16 @@ img {
   margin-top: 10rem;
   margin-bottom: 3rem;
 }
+
+.card {
+  box-shadow: 0 5px 13px 0 rgba(117,110,133,.34);
+  padding: 5%;
+  background-color: white;
+  border-radius: 10px;
+  width: 60%;
+  margin: auto;
+}
+
 
 /* Text Styles*/
 .x-large {
@@ -221,7 +231,7 @@ img {
 
 .bg-light,
 .badge-light {
-  border: #ccc solid 1px;
+  /* border: #ccc solid 1px; */
 }
 
 .round-img {
@@ -454,6 +464,9 @@ button {
   padding: 1rem;
   line-height: 1.8;
   margin-bottom: 1rem;
+  box-shadow: 0 5px 13px 0 rgba(117,110,133,.34);
+  background: white;
+  border-radius: 10px;
 }
 
 
