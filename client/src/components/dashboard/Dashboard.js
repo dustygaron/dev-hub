@@ -20,7 +20,7 @@ const Dashboard = ({
     getCurrentProfile()
   }, [getCurrentProfile])
 
-  return loading && profile === null ? <Spinner /> : <>
+  return loading && profile === null ? <Spinner /> : <div className='card'>
     <h1 className='large text-primary'>Dashboard</h1>
     <p className='lead'>
       <i className='fas fa-user'></i> Welcome {user && user.name}
@@ -44,7 +44,7 @@ const Dashboard = ({
           </Link>
         </>
       )}
-  </>
+  </div>
 
 }
 
