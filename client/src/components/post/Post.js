@@ -17,12 +17,12 @@ const Post = ({ getPost, post: { post, loading }, match }) => {
   return loading || post === null ? (
     <Spinner />
   ) : (
-      <div className='card'>
+      <div>
         <Link to='/posts' className='btn'>
           <i class="fas fa-arrow-left"></i> Back To Posts
         </Link>
 
-        <div>
+        <div className='card'>
           <PostItem post={post} showActions={false} />
           <CommentForm postId={post._id} />
           <div className='comments'>

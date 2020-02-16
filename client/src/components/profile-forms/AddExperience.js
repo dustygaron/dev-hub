@@ -39,7 +39,7 @@ const AddExperience = ({ addExperience, history }) => {
   }
 
   return (
-    <>
+    <div className='card'>
       <h1 className="large text-primary">
         Add An Experience
       </h1>
@@ -134,7 +134,7 @@ const AddExperience = ({ addExperience, history }) => {
           Go Back
         </Link>
       </form>
-    </>
+    </div>
   )
 }
 

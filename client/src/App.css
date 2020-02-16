@@ -55,7 +55,7 @@ img {
 }
 
 .card {
-  box-shadow: 0 5px 13px 0 rgba(117,110,133,.34);
+  /* box-shadow: 0 5px 13px 0 rgba(117,110,133,.34); */
   padding: 5%;
   background-color: white;
   border-radius: 10px;
