@@ -55,7 +55,6 @@ img {
 }
 
 .card {
-  /* box-shadow: 0 5px 13px 0 rgba(117,110,133,.34); */
   padding: 5%;
   background-color: white;
   border-radius: 10px;
@@ -463,7 +462,6 @@ button {
   padding: 1rem;
   line-height: 1.8;
   margin-bottom: 1rem;
-  box-shadow: 0 5px 13px 0 rgba(117,110,133,.34);
   background: white;
   border-radius: 10px;
 }
@@ -615,7 +613,7 @@ button {
     display: none;
   }
 
-  /* Text Styles */
+  /* Text */
   .x-large {
     font-size: 3rem;
   }
@@ -693,4 +691,28 @@ button {
   .post button {
     padding: 0.3rem 0.4rem;
   }
+
+  /* Landing */
+  .landing-inner {
+    width: 100%;
+    transform: translateX(0);
+  }
+
+  .landing h1 {
+    font-size: 2.5rem;
+  }
+
+  .landing p {
+    font-size: 1.5rem;
+}
+
+  .landing{
+    background-size: cover;
+    height: 60vh;
+  }
+
+  .logo {
+    width: 17rem;
+  }
+
 }
