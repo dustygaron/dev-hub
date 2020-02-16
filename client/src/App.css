@@ -600,6 +600,12 @@ button {
   margin-bottom: 0.5rem;
 }
 
+/* ---------------- */
+/* Posts 
+/* ---------------- */
+footer {
+  text-align: center;
+}
 
 /* ---------------- */
 /* Media Queries 

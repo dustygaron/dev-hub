@@ -22,6 +22,7 @@ import store from './store'
 import { loadUser } from './actions/auth'
 import setAuthToken from './utils/setAuthToken'
 import Profile from './components/profile/Profile'
+import Footer from './components/Footer'
 
 
 
@@ -56,6 +57,7 @@ const App = () => {
               <PrivateRoute exact path='/posts/:id' component={Post} />
             </Switch>
           </section>
+          <Footer />
         </>
       </Router>
     </Provider>
