@@ -377,7 +377,7 @@ button {
 /* ---------------- */
 .navbar {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   padding: 2rem 2rem;
   position: fixed;
@@ -610,6 +610,13 @@ footer {
 /* ---------------- */
 /* Media Queries 
 /* ---------------- */
+@media only screen and (min-width: 993px){
+  .landing {
+    background-size: cover;
+  }
+}
+
+
 @media (max-width: 700px) {
   .container {
     margin-top: 8rem;
