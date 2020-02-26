@@ -41,11 +41,9 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
 
   return (
     <nav className='navbar bg-dark'>
-      <h1>
-        <Link to='/'>
-          <img src={logo} alt='Developer Hub Logo' className='logo' />
-        </Link>
-      </h1>
+      <Link to='/'>
+        <img src={logo} alt='Developer Hub Logo' className='logo' />
+      </Link>
       {!loading && (<>{isAuthenticated ? authLinks : guestLinks}</>)}
     </nav>
   )

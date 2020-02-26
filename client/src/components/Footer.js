@@ -4,7 +4,7 @@ const Footer = props => {
   return (
 
     <footer>
-      Developer Hub is a project by <a href='https://dustygaron.com' target="_blank" rel="noopener"><strong>Dusty Garon</strong></a>.
+      Developer Hub is a project by <a href='https://dustygaron.com' target='_blank' rel='noopener noreferrer'><strong>Dusty Garon</strong></a>.
     </footer>
 
   )
