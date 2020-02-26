@@ -465,6 +465,9 @@ button {
   border-radius: 10px;
 }
 
+.profiles .btn {
+  margin-top: 10px;
+}
 
 /* ---------------- */
 /* Profile 
